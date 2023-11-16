@@ -1,5 +1,6 @@
 import './Home.scss';
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 import image1 from  '../../Assets/Images/1486405200970.jpeg';
 import image2 from '../../Assets/Images/1592939451186.jpeg';
@@ -70,11 +71,13 @@ function Home({ recipeData }) {
 
     return (
         <div className='recipe__container'>
-            {recipeData.map((recipe, index) => (
-                <div key={index} className='recipe__card'>
+            {recipeData.map((recipe) => (
+                <div key={recipe.id} className='recipe__card'>
+                    <Link to={`/recipes/${recipe.id}`}>
                     <div className='recipe__image' style={{ backgroundImage: `url(${getImages()})` }}>
                         <div className='title'>{recipe.title}</div>
                     </div>
+                    </Link>
                 </div>
             ))}
         </div>

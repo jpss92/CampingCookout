@@ -29,13 +29,13 @@ function App() {
       <Route 
       path="/"
       element={
-        <>
+         <>
         <Header />
-        <Home recipeData={recipeData} />
+        <Home recipeData={recipeData} /> 
         </>
       }
         />
-      <Route path="/recipes" element={<Recipes recipeData={recipeData} />} />
+      <Route path="/recipes/:id" element={<Recipes recipeData={recipeData} />} />
     </Routes>
    
     </Router>
