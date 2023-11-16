@@ -1,9 +1,9 @@
 import { useParams } from 'react-router-dom';
 import './Recipes.scss';
-import Home from '../Home/Home';
+import { getImages, imagePaths } from '../Images/Images';
 
 
-function Recipes({ recipeData }) {
+function Recipes({ recipeData, getImages }) {
 
     const { id } = useParams();
     const selectedRecipe = recipeData.find(recipe => recipe.id === Number(id));
@@ -14,22 +14,20 @@ function Recipes({ recipeData }) {
  
   return (
     <div className='recipe__container'>
-      {recipeData.map((recipe) => (
-        <div key={recipe.id} className='recipe'>
+        <div key={selectedRecipe.id} className='recipe'>
           <div className='recipe__title'>{selectedRecipe.title}</div>
           <img
             className='recipe__img'
-            
+            src={getImages()}
             alt="recipe"
             />
           <ul>
-          {recipe.ingredients.map((ingredient, index) => (
+          {selectedRecipe.ingredients.map((ingredient, index) => (
               <li key={index} className='ingredients'>{ingredient}</li>
             ))}
           </ul>
-          <div className='instructions'>{recipe.instructions.join(' ')}</div>
+          <div className='instructions'>{selectedRecipe.instructions.join(' ')}</div>
         </div>
-      ))}
     </div>
   );
 };

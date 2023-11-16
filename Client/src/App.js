@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import Recipes from "./components/Recipes/Recipes.jsx";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import {getImages, imagePaths } from "./components/Images/Images.js";
 
 
 function App() {
@@ -24,21 +25,25 @@ function App() {
   }, []);
 
   return (
+    <>
+    <Header />
     <Router>
     <Routes>
+      
       <Route 
       path="/"
       element={
          <>
-        <Header />
+        
         <Home recipeData={recipeData} /> 
         </>
       }
         />
-      <Route path="/recipes/:id" element={<Recipes recipeData={recipeData} />} />
+      <Route path="/recipes/:id" element={recipeData.length ? <Recipes recipeData={recipeData} getImages={getImages} /> : null} />
     </Routes>
    
     </Router>
+    </>
   );
 }
 
