@@ -3,6 +3,8 @@ import Home from "./components/Home/Home.jsx";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Recipes from "./components/Recipes/Recipes.jsx";
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
 
 function App() {
 
@@ -22,12 +24,21 @@ function App() {
   }, []);
 
   return (
-    <>
-    <Header />
-    <Home recipeData={recipeData} />
-    {/* <Recipes recipeData={recipeData} /> */}
+    <Router>
+    <Routes>
+      <Route 
+      path="/"
+      element={
+        <>
+        <Header />
+        <Home recipeData={recipeData} />
+        </>
+      }
+        />
+      <Route path="/recipes" element={<Recipes recipeData={recipeData} />} />
+    </Routes>
    
-    </>
+    </Router>
   );
 }
 

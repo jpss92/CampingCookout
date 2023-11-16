@@ -1,18 +1,35 @@
+@import '../../_fonts';
+
 .recipe {
-    width: 18.75rem;
-    height: 18.75rem;
 
     &__container {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
-        
+        justify-content: center;  
     }
-    
-    &__img {
-        width: 8rem;
+   
+    &__card {
+        margin: .5rem 1rem ; 
+    }
+
+    &__image {
+        background-size: cover;
+        background-color: black;
         border-radius: .5rem;
-        margin: .5rem;
-        
+        background-position: center;
+        background-repeat: no-repeat;
     }
+
 }
+
+.title {
+    width: 15.625rem;
+    height: 12.5rem;
+    color: white;
+    font-family: 'Agbalumo', sans-serif;
+    margin: 0 1rem;
+    padding-top: 1rem;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    
+    
+};

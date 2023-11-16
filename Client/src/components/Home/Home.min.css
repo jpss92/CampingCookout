@@ -1,2 +1,2 @@
-.recipe{width:18.75rem;height:18.75rem}.recipe__container{display:flex;flex-wrap:wrap;justify-content:center}.recipe__img{width:8rem;border-radius:.5rem;margin:.5rem}
+@font-face{font-family:"Agbalumo";src:url("./Assets/Font/Agbalumo/Agbalumo-Regular.ttf") format("truetype");font-weight:normal;font-style:normal}.recipe__container{display:flex;flex-wrap:wrap;justify-content:center}.recipe__card{margin:.5rem 1rem}.recipe__image{background-size:cover;background-color:#000;border-radius:.5rem;background-position:center;background-repeat:no-repeat}.title{width:15.625rem;height:12.5rem;color:#fff;font-family:"Agbalumo",sans-serif;margin:0 1rem;padding-top:1rem;text-shadow:-1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000}
 /*# sourceMappingURL=Home.min.css.map */
