@@ -1,0 +1,18 @@
+.recipe {
+    width: 18.75rem;
+    height: 18.75rem;
+
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+    }
+    
+    &__img {
+        width: 8rem;
+        border-radius: .5rem;
+        margin: .5rem;
+        
+    }
+}
