@@ -26,19 +26,11 @@ function App() {
 
   return (
     <>
-    <Header />
+    
     <Router>
+      <Header />
     <Routes>
-      
-      <Route 
-      path="/"
-      element={
-         <>
-        
-        <Home recipeData={recipeData} /> 
-        </>
-      }
-        />
+      <Route path="/" element={ <> <Home recipeData={recipeData} /> </> } />
       <Route path="/recipes/:id" element={recipeData.length ? <Recipes recipeData={recipeData} getImages={getImages} /> : null} />
     </Routes>
    

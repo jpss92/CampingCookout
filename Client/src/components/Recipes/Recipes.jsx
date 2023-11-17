@@ -38,7 +38,7 @@
                 <li key={index} className='ingredients'>
                 <img
                 className='icon'
-                src={iconUrl[index]}
+                src={iconUrl}
                 alt={`icon-${index}`}
                 style={{
                   width: '20px', // Adjust the size as needed

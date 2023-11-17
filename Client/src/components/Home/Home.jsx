@@ -2,8 +2,7 @@ import './Home.scss';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import { getImages } from '../Images/Images';
-import imagePaths from '../Images/Images';
+import { getImages, imagePaths } from '../Images/Images';
 
 
 function Home({ recipeData }) {
