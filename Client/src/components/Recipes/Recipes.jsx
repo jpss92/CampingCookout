@@ -28,22 +28,26 @@
       <div className='recipe__container'>
           <div key={selectedRecipe.id} className='recipe'>
             <div className='recipe__title'>{selectedRecipe.title}</div>
-            <img
-              className='recipe__img'
-              src={getImages()}
-              alt="recipe"
+            <div className='recipe__container--img'>
+              <img
+                className='recipe__img'
+                src={getImages()}
+                alt="recipe"
               />
+            </div>
             <ul>
             {selectedRecipe.ingredients.map((ingredient, index) => (
                 <li key={index} className='ingredients'>
                 <img
                 className='icon'
-                src={iconUrl}
+                src={getIcons()}
                 alt={`icon-${index}`}
                 style={{
-                  width: '20px', // Adjust the size as needed
-                  height: '20px',
-                  marginRight: '5px', // Adjust the spacing as needed
+                  width: '.5rem',
+                  height: '.5rem',
+                  marginRight: '5px',
+                  backgroundColor: 'white',
+                  marginRight: '1rem',
                 }}
               />
                 {ingredient}

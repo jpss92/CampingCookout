@@ -1,20 +1,35 @@
+
 .recipe {
     border: 1px solid black;
     border-radius: .5rem;
-    margin: .5rem 1rem;
-   
-    
-    // &__container {
-        
-    // }
+    margin: 0 1rem;
+    background-color: beige;
 
     &__img {
         max-width: 100%;
         max-height: 100%;
         object-fit: cover;
+        border-radius: .2rem;
+        text-align: center;
+    }
+
+    &__container {
+
+        background-image: url('../../Assets/Images/background/images.webp');
+        background-size: contain;
+
+        &--img {
+           background-color: rgb(128, 128, 128, .5);
+           text-align: center;
+           
+        }
     }
 }
 
-.ingredients::before {
-    width: 20px;
+.ingredients {
+    list-style: none;  
+};
+
+.instructions {
+    margin: .5rem 1rem;
 }

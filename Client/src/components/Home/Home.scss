@@ -2,10 +2,13 @@
 
 .recipe {
 
-    &__container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;  
+    &__card {
+
+        &--container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;  
+        }
     }
    
     &__card {

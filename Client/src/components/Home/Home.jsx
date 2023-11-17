@@ -34,7 +34,7 @@ function Home({ recipeData }) {
     }, []);
 
     return (
-        <div className='recipe__container'>
+        <div className='recipe__card--container'>
             {recipeData.map((recipe) => (
                 <div key={recipe.id} className='recipe__card'>
                     <Link to={`/recipes/${recipe.id}`}>
