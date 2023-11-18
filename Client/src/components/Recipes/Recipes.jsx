@@ -35,6 +35,7 @@
                 alt="recipe"
               />
             </div>
+            <h3 className='recipe__heading'>Ingredients</h3>
             <ul>
             {selectedRecipe.ingredients.map((ingredient, index) => (
                 <li key={index} className='ingredients'>
@@ -43,17 +44,17 @@
                 src={getIcons()}
                 alt={`icon-${index}`}
                 style={{
-                  width: '.5rem',
-                  height: '.5rem',
-                  marginRight: '5px',
-                  backgroundColor: 'white',
-                  marginRight: '1rem',
+                  width: '.7rem',
+                  height: '.7rem',
+                  marginRight: '1.3rem',
+                  marginTop: '.3rem',
                 }}
               />
                 {ingredient}
               </li>
               ))}
             </ul>
+            <h3 className='recipe__heading'>Directions</h3>
             <div className='instructions'>{selectedRecipe.instructions.join(' ')}</div>
           </div>
       </div>

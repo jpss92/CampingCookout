@@ -1,8 +1,16 @@
+@font-face {
+  font-family: "Agbalumo";
+  src: url("./Assets/Font/Agbalumo/Agbalumo-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 .recipe {
   border: 1px solid black;
   border-radius: 0.5rem;
   margin: 0 1rem;
   background-color: beige;
+  padding: 1rem;
+  font: 0.8125rem;
 }
 .recipe__img {
   max-width: 100%;
@@ -12,20 +20,34 @@
   border-radius: 0.2rem;
   text-align: center;
 }
+.recipe__title {
+  font-family: "Agbalumo", sans-serif;
+  padding-bottom: 1rem;
+  font-size: 1.5rem;
+}
 .recipe__container {
   background-image: url("../../Assets/Images/background/images.webp");
   background-size: contain;
+  padding: 1rem 0;
 }
 .recipe__container--img {
-  background-color: rgba(128, 128, 128, 0.5);
   text-align: center;
+}
+.recipe__heading {
+  font-size: 0.9375rem;
 }
 
 .ingredients {
   list-style: none;
+  display: flex;
+  margin-top: 0.5rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-style: italic;
+  padding-right: 1rem;
 }
 
 .instructions {
   margin: 0.5rem 1rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 /*# sourceMappingURL=Recipes.css.map */

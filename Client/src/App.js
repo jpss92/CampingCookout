@@ -7,9 +7,11 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import {getImages, imagePaths } from "./components/Images/Images.js";
 
 
+
 function App() {
 
   const [recipeData, setRecipeData] = useState([]);
+  const [searchResults, setSearchResults] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -25,17 +27,15 @@ function App() {
   }, []);
 
   return (
-    <>
     
     <Router>
-      <Header />
+      <Header recipeData={recipeData} setSearchResults={setSearchResults}/>
     <Routes>
-      <Route path="/" element={ <> <Home recipeData={recipeData} /> </> } />
+      <Route path="/" element={ <> <Home recipeData={searchResults.length > 0 ? searchResults : recipeData}  /> </> } />
       <Route path="/recipes/:id" element={recipeData.length ? <Recipes recipeData={recipeData} getImages={getImages} /> : null} />
     </Routes>
-   
     </Router>
-    </>
+    
   );
 }
 

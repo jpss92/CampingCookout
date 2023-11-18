@@ -1,9 +1,12 @@
+@import '../../_fonts';
 
 .recipe {
     border: 1px solid black;
     border-radius: .5rem;
     margin: 0 1rem;
     background-color: beige;
+    padding: 1rem;  
+    font: .8125rem;
 
     &__img {
         max-width: 100%;
@@ -13,23 +16,39 @@
         text-align: center;
     }
 
+    &__title {
+        font-family: 'Agbalumo', sans-serif;
+        padding-bottom: 1rem;
+        font-size: 1.5rem;
+    }
+
     &__container {
 
         background-image: url('../../Assets/Images/background/images.webp');
         background-size: contain;
+        padding: 1rem 0;
 
         &--img {
-           background-color: rgb(128, 128, 128, .5);
            text-align: center;
            
         }
     }
+
+    &__heading {
+        font-size: .9375rem;
+    }
 }
 
 .ingredients {
-    list-style: none;  
+    list-style: none;
+    display: flex;
+    margin-top: .5rem;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: italic;
+    padding-right: 1rem;
 };
 
 .instructions {
     margin: .5rem 1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
