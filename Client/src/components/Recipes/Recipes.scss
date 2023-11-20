@@ -1,4 +1,5 @@
 @import '../../_fonts';
+@import '../../_mixins';
 
 .recipe {
     border: 1px solid black;
@@ -6,7 +7,8 @@
     margin: 0 1rem;
     background-color: beige;
     padding: 1rem;  
-    font: .8125rem;
+    font-size: .8125rem;
+    box-shadow: -1rem 1rem .3125rem -.6rem  rgba(5, 5, 5, 0.5) ;
 
     &__img {
         max-width: 100%;
@@ -20,13 +22,15 @@
         font-family: 'Agbalumo', sans-serif;
         padding-bottom: 1rem;
         font-size: 1.5rem;
+        height: auto;
     }
 
     &__container {
 
         background-image: url('../../Assets/Images/background/images.webp');
         background-size: contain;
-        padding: 1rem 0;
+        padding: 14rem 0 2rem;
+        
 
         &--img {
            text-align: center;
@@ -51,4 +55,35 @@
 .instructions {
     margin: .5rem 1rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+@include tablet {
+    .recipe {
+
+        &__container {
+            padding: 38% 2rem 3rem;
+        }
+
+        &__content {
+            display: flex;
+
+        }
+
+        &__ingredients {
+            &--container {
+                width: 50%;
+            }
+        }
+
+        &__instructions {
+
+            &--container {
+                width: 50%;
+            }
+        }
+    }
+}
+
+@include desktop {
+
 }

@@ -72,6 +72,6 @@ export const getIcons = () => {
     const index = Math.floor(Math.random() * iconPaths.length);
     const iconUrl = iconPaths[index];
     return iconUrl;
-};
+}
 
 export default { imagePaths, iconPaths };

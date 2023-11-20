@@ -35,6 +35,8 @@
                 alt="recipe"
               />
             </div>
+            <div className='recipe__content'>
+              <div className='recipe__ingredients--container'>
             <h3 className='recipe__heading'>Ingredients</h3>
             <ul>
             {selectedRecipe.ingredients.map((ingredient, index) => (
@@ -54,8 +56,12 @@
               </li>
               ))}
             </ul>
+            </div>
+            <div className='recipe__instructions--container'>
             <h3 className='recipe__heading'>Directions</h3>
             <div className='instructions'>{selectedRecipe.instructions.join(' ')}</div>
+            </div>
+            </div>
           </div>
       </div>
     );

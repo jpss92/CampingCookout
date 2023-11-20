@@ -18,6 +18,7 @@ function App() {
       try {
         const response = await axios.get('http://localhost:5050/camping_cookout/Server/recipes.json');
         setRecipeData(response.data);
+        setSearchResults([]);
       } catch (error) {
         console.error('Error fetching data:', error.message);
       }
@@ -32,10 +33,10 @@ function App() {
       <Header recipeData={recipeData} setSearchResults={setSearchResults}/>
     <Routes>
       <Route path="/" element={ <> <Home recipeData={searchResults.length > 0 ? searchResults : recipeData}  /> </> } />
-      <Route path="/recipes/:id" element={recipeData.length ? <Recipes recipeData={recipeData} getImages={getImages} /> : null} />
+      <Route path="/recipes/:id" element={recipeData.length ? <Recipes recipeData={recipeData}  /> : null} />
     </Routes>
     </Router>
-    
+
   );
 }
 

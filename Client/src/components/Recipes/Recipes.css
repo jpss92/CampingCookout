@@ -10,7 +10,8 @@
   margin: 0 1rem;
   background-color: beige;
   padding: 1rem;
-  font: 0.8125rem;
+  font-size: 0.8125rem;
+  box-shadow: -1rem 1rem 0.3125rem -0.6rem rgba(5, 5, 5, 0.5);
 }
 .recipe__img {
   max-width: 100%;
@@ -24,11 +25,12 @@
   font-family: "Agbalumo", sans-serif;
   padding-bottom: 1rem;
   font-size: 1.5rem;
+  height: auto;
 }
 .recipe__container {
   background-image: url("../../Assets/Images/background/images.webp");
   background-size: contain;
-  padding: 1rem 0;
+  padding: 14rem 0 2rem;
 }
 .recipe__container--img {
   text-align: center;
@@ -49,5 +51,20 @@
 .instructions {
   margin: 0.5rem 1rem;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+@media (min-width: 768px) {
+  .recipe__container {
+    padding: 38% 2rem 3rem;
+  }
+  .recipe__content {
+    display: flex;
+  }
+  .recipe__ingredients--container {
+    width: 50%;
+  }
+  .recipe__instructions--container {
+    width: 50%;
+  }
 }
 /*# sourceMappingURL=Recipes.css.map */

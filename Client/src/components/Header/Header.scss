@@ -1,18 +1,25 @@
+@import '../../_mixins';
+
 .header {
+
+    
+
     &__container {
-        background-color: forestgreen;
+        background-color: rgb(17, 220, 193);
         display: flex;
         flex-direction: column;
         align-items: center;
+        box-shadow: .5rem .5rem 5rem .6rem rgb(0, 0, 0, .5) inset, -.5rem -.5rem 5rem .6rem rgb(0, 0, 0, .5) inset;
+        position: fixed;
+        
     }
     &__logo {
         width: 65%;
-        padding: 1rem;
+        padding: .5rem 1rem .3rem 1rem;
     }
     
     &__search {
-        padding-bottom: 1rem;
-
+        
         &--input {
             border-radius: .3rem;
         }
@@ -22,6 +29,7 @@
             align-items: center;
             justify-content: space-between;
             width: 85%;
+           
         }
     }
 
@@ -30,3 +38,79 @@
        height: 3rem;
     }
 }
+
+@include tablet {
+    .header {
+
+        &__logo {
+            width: 40%;
+        }
+
+        &__container {
+            display: flex;
+            flex-direction: row;
+            padding-bottom: 1rem;
+        }
+
+        &__search {
+
+            padding-top: 2rem;
+
+            &--container {
+                flex-direction: column;
+                padding-top: 4rem;
+                
+            }
+
+            &--input {
+                width: 13rem;
+                height: 1.5rem;
+            }
+        }
+
+        &__home {
+            width: 5rem;
+            height: auto;
+        }
+    }
+
+    #search {
+        &__btn {
+            height: 2rem;
+            width: 6rem;
+            margin-left: .5rem;
+        }
+    }
+};
+
+@include desktop {
+    .header {
+
+        &__container {
+            align-items: center;
+        }
+
+        &__logo {
+            width: 15%;
+            padding-left: 6rem;
+        }
+
+        &__home {
+            padding-right: 2rem;
+        }
+
+        &__search {
+
+            padding-top: 0;
+
+            &--container {
+                flex-direction: row;
+                justify-content: end;
+                align-items: center;
+                padding-top: 2rem;
+                margin-right: 3rem;
+                padding-left: 4rem;
+            }
+        }
+    }
+};
