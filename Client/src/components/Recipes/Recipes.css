@@ -56,15 +56,43 @@
 @media (min-width: 768px) {
   .recipe__container {
     padding: 38% 2rem 3rem;
+    display: flex;
+    justify-content: center;
   }
   .recipe__content {
     display: flex;
+    justify-content: center;
   }
   .recipe__ingredients--container {
     width: 50%;
+    width: auto;
+    margin-right: 2rem;
   }
   .recipe__instructions--container {
     width: 50%;
+  }
+}
+@media (min-width: 1280px) {
+  .recipe {
+    width: 62.5rem;
+  }
+  .recipe__container {
+    padding-top: 20%;
+  }
+  .recipe__ing {
+    max-height: 34.375rem;
+  }
+  .recipe__ingredients--container {
+    padding-left: 4rem;
+  }
+  .recipe__content {
+    font-size: 1.5rem;
+  }
+  .recipe__title {
+    font-size: 3rem;
+  }
+  .recipe__heading {
+    font-size: 1.8rem;
   }
 }
 /*# sourceMappingURL=Recipes.css.map */

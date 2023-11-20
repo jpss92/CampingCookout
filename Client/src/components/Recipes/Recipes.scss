@@ -62,16 +62,21 @@
 
         &__container {
             padding: 38% 2rem 3rem;
+            display: flex;
+            justify-content: center;
         }
 
         &__content {
             display: flex;
+            justify-content: center;
 
         }
 
         &__ingredients {
             &--container {
                 width: 50%;
+                width: auto;
+                margin-right: 2rem;
             }
         }
 
@@ -85,5 +90,40 @@
 }
 
 @include desktop {
+    .recipe {
+
+        width: 62.5rem;
+        
+    
+        &__container {
+            padding-top: 20%;
+            
+
+        }
+
+        &__ing {
+            max-height: 34.375rem;
+           }
+
+        &__ingredients {
+
+            &--container {
+                padding-left: 4rem;
+                
+            }
+        }
+
+        &__content {
+            font-size: 1.5rem;
+        }
+
+        &__title {
+            font-size: 3rem;
+        }
+
+        &__heading {
+            font-size: 1.8rem;
+        }
+    }
 
 }
