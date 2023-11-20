@@ -25,7 +25,6 @@ app.get('/camping_cookout/Server/recipes.json', async (req, res) => {
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 
-  // Call fetchData only after the server is fully started
   fetchData();
 });
 
