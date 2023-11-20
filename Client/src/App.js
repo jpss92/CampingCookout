@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import Recipes from "./components/Recipes/Recipes.jsx";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import {getImages, imagePaths } from "./components/Images/Images.js";
 
 
 

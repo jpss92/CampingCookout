@@ -38,9 +38,9 @@ function Home({ recipeData }) {
     return (
         <div className='recipe__card--container'>
             {recipeData.map((recipe) => (
-                <div key={recipe.id} className='recipe__card'>
+                <div key={`recipe-${recipe.id}`}  className='recipe__card'>
                     <Link to={`/recipes/${recipe.id}`}>
-                    <div className='recipe__image' style={{ backgroundImage: `url(${getImages()})` }}>
+                    <div className='recipe__image' style={{ backgroundImage: `url(${getImages(recipe.id)})` }}>
                         <div className='title'>{recipe.title}</div>
                     </div>
                     </Link>

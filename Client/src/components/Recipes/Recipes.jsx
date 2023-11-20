@@ -13,15 +13,13 @@
       }
 
       const iconUrl = getIcons(1)[0]; 
-      
-      console.log(getIcons)
 
       const iconStyle = {
-        listStyle: 'none', // Hide the default marker
-        backgroundImage: `url(${iconUrl})`, // Use getIcons(1) to get one icon URL
-        backgroundSize: 'contain', // Adjust the size as needed
+        listStyle: 'none', 
+        backgroundImage: `url(${iconUrl})`,
+        backgroundSize: 'contain',
         backgroundRepeat: 'no-repeat',
-        paddingLeft: '30px', // Adjust the padding as needed
+        paddingLeft: '30px',
       };
   
     return (
@@ -40,7 +38,7 @@
             <h3 className='recipe__heading'>Ingredients</h3>
             <ul>
             {selectedRecipe.ingredients.map((ingredient, index) => (
-                <li key={index} className='ingredients'>
+                <li key={`ingredient-${selectedRecipe.id}-${index}`} className='ingredients'>
                 <img
                 className='icon'
                 src={getIcons()}
